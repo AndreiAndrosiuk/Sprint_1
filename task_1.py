@@ -4,9 +4,9 @@ total_minutes = 0
 
 time_values = time.split(',')
 
-for time_val in time_values:
+for values in time_values:
 
-    time_parts = time_val.split()
+    time_parts = values.split()
 
     for part in time_parts:
 
