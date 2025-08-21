@@ -1,9 +1,6 @@
-import random
- 
 class TestCase:
-    def __init__(self, name):
-        self.case_id = random.randrange(100, 1000)
-        self.name = name
+    
+    def __init__(self):
         self.steps = {}
         self.result = None
  
@@ -17,9 +14,9 @@ class TestCase:
         self.result = result
  
     def get_test_case(self):
-        print({'id': self.case_id, 'Название': self.name, 'Шаги': self.steps, 'Ожидаемый результат': self.result})
+        print({'Шаги': self.steps, 'Ожидаемый результат': self.result})
 
-test_case_1 = TestCase(name = "Добавление товара в корзину")
+test_case_1 = TestCase()
 test_case_1.set_step(1, 'Перейти на сайт')
 test_case_1.set_step(3, 'Перейти в раздел Товары')
 test_case_1.delete_step(3)
@@ -28,7 +25,7 @@ test_case_1.set_step(3, 'Нажать кнопку «В корзину» у пе
 test_case_1.set_result('Товар окажется в корзине')
 test_case_1.get_test_case()
 
-test_case_2 = TestCase(name = "Уделение товара из корзины")
+test_case_2 = TestCase()
 test_case_2.set_step(1, 'Перейти на сайт')
 test_case_2.set_step(2, 'Перейти в раздел Корзина')
 test_case_2.set_step(3, 'Нажать кнопку "Удалить"')
